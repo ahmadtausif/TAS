@@ -1,0 +1,144 @@
+# TAS
+My first personal repository
+<!doctype html>
+<html>
+<head>
+  <title>TEST PAGE</title>
+
+  <script type="text/javascript" src="jquery-1.11.3.js"></script>
+
+  <style type="text/css">
+  body{
+    margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px;
+    padding: 0;
+    color: black; font-size: 10pt; font-family: "Trebuchet MS", sans-serif;
+    background-color: #E2E2E2;
+	}
+  
+  
+  
+div.topmenu {
+	    margin: 0px 0px 0px 0px; 
+	    background-color: grey;
+		color: white;
+		position: absolute;
+		display: inline-block;;
+  
+  }
+			
+  
+		section.sidebar {
+				  margin: 0px 0px 0px 0px;
+				  width: 70px;
+				  position: absolute;
+				  top: 0;
+				  bottom: 0;
+				  background-color: grey;
+				  display: inline-block;
+			}
+
+		section.main { 
+			margin-left: 150px; 
+		}
+		
+		ul
+			{
+			   margin: 0px 0px 0px 0px; 
+				padding: 20px 0px 20px 0px;
+				list-style-type: none;
+			}
+		
+		ul.menuul > li {
+			margin: 20px 10px 20px 10px; 
+			padding: 10px 0px 10px 0px;
+			background-color: #FFFFFF;
+			border: 1px solid black;
+		}
+		
+		a { 
+		text-decoration : none; 
+		color : #000; 
+		}
+		  </style>
+		  
+		  
+</head>
+
+<body onload="">
+	<script type="text/javascript">
+					$(document).ready(function(){
+							var inputTXT="";
+							 $("#btnADD").click(function(){
+							 inputTXT=$("#inputT").val();
+								//alert("btnCLicked"+inputTXT);
+								$("#textDIV").append(inputTXT+"\n");
+							 });
+							 
+							 $("#btnSHOW").click(function(){
+								
+								//alert($("#textDIV").text());
+								$("#finalvalue").text($("#textDIV").text());
+								
+							 });
+							 
+							 
+							 $("#sidebar").hover(function(){
+								$("#sidebar").fadeToggle();
+							});
+							
+							$("#btnSHOW").hover(function(){
+								$("#sidebar").show();
+							});
+							
+						
+							 
+					});		 
+				</script>
+
+<div class="topmenu" style="height: 50px; width: 100%; font-family: Monospace; font-size: 35px;text-align:center;">
+DASHBOARD
+</div>
+<section class="sidebar" id="sidebar">
+	<div style="overflow: false">
+
+	<ul class="menuul">
+	  <li><a href="" >Process</a></li>
+	  <li><a href="" >Persons</a></li>
+	  <li><a href="" >Failures</a></li>
+	  <li><a href="" >Calandar</a></li>
+	  <li><a href="" >Day Stats</a></li>
+	  <li><a href="" >Day Complete</a></li>
+	  <li><a href="" >Weekly</a></li>
+	</ul>
+
+
+</div>
+</section>
+
+<section class="main">I'm the main section.
+
+				<div style="height: 100%; width: 10%;">
+					sidebar
+				</div>
+
+
+
+				<p>
+				  Ahmad
+				</p>
+
+				<p>Date: <input type="text" id="datepicker"></p>
+				<input type="text" id="inputT" size="100" value="addme "/>
+				<br/>
+				<input type="button" id="btnADD" value="ADD" />
+				<input type="button" id="btnSHOW" value="Show" />
+				<br/><br/>
+				<div id="textDIV">START</div>
+
+				<textarea id="finalvalue" rows="20" cols="150">FinalValue</textarea>
+				
+			
+
+</section>
+</body>
+</html>
